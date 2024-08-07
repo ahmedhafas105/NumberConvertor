@@ -216,9 +216,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void convertfunc()
     {
-        binary = Integer.toBinaryString(numvalue);
-        octal = Integer.toOctalString(numvalue);
-        hexadecimal = Integer.toHexString(numvalue);
+        if (inputNum.getText().toString().equals("")) {
+            Toast.makeText(MainActivity.this, "Empty Input", Toast.LENGTH_SHORT).show();
+        } else if(inputNum.length() > 10) {
+            Toast.makeText(MainActivity.this, "Maximum input length is 10", Toast.LENGTH_SHORT).show();
+        } else {
+            binary = Integer.toBinaryString(numvalue);
+            octal = Integer.toOctalString(numvalue);
+            hexadecimal = Integer.toHexString(numvalue);
+        }
+
     }
 
     private void displayval() {
