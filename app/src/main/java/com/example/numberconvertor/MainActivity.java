@@ -204,27 +204,11 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(b)
                 {
-                    interfaceLayout.setBackgroundColor(Color.WHITE);
-                    switchMode.setText("Light");
-                    switchMode.setTextColor(Color.BLACK);
-                    inputNum.setTextColor(Color.BLACK);
-                    txtBinary.setTextColor(Color.BLACK);
-                    txtOctal.setTextColor(Color.BLACK);
-                    txtHexa.setTextColor(Color.BLACK);
-                    hexDecLabel.setTextColor(Color.BLACK);
-                    binaryLabel.setTextColor(Color.BLACK);
-                    octalLabel.setTextColor(Color.BLACK);
-                } else {
-                    interfaceLayout.setBackgroundColor(Color.BLACK);
+                    interfaceLayout.setBackgroundResource(R.drawable.dark_bg);
                     switchMode.setText("Dark");
-                    switchMode.setTextColor(Color.WHITE);
-                    inputNum.setTextColor(Color.WHITE);
-                    txtBinary.setTextColor(Color.WHITE);
-                    txtOctal.setTextColor(Color.WHITE);
-                    txtHexa.setTextColor(Color.WHITE);
-                    hexDecLabel.setTextColor(Color.WHITE);
-                    binaryLabel.setTextColor(Color.WHITE);
-                    octalLabel.setTextColor(Color.WHITE);
+                } else {
+                    interfaceLayout.setBackgroundResource(R.drawable.bg);
+                    switchMode.setText("Light");
                 }
             }
         });
